@@ -77,14 +77,6 @@ var config_default = defineConfig4CustomTheme({
         ]
       },
       {
-        text: "\u9875\u9762",
-        link: "/ui/",
-        items: [
-          { text: "HTML", link: "/pages/8309a5b876fc95e3/" },
-          { text: "CSS", link: "/pages/0a83b083bdf257cb/" }
-        ]
-      },
-      {
         text: "\u4E2A\u4EBA\u611F\u609F",
         link: "/technology/",
         items: [

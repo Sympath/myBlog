@@ -13,7 +13,7 @@
         <template v-for="(item, index) in getCatalogueList()">
           <dl v-if="type(item) === 'array'" :key="index" class="inline">
             <dt>
-              <router-link :to="item[2]">{{
+              <router-link v-if="item[2]" :to="item[2]">{{
                 `${index + 1}. ${item[1]}`
               }}</router-link>
             </dt>
@@ -28,7 +28,7 @@
               <!-- 二级目录 -->
               <template v-for="(c, i) in item.children">
                 <template v-if="type(c) === 'array'">
-                  <router-link :to="c[2]" :key="i">{{
+                  <router-link :to="c[2]" v-if="c[2]" :key="i">{{
                     `${index + 1}-${i + 1}. ${c[1]}`
                   }}</router-link>
                 </template>
@@ -43,7 +43,7 @@
                     {{ `${index + 1}-${i + 1}. ${c.title}` }}
                   </div>
                   <router-link
-                    v-for="(cc, ii) in c.children"
+                    v-for="(cc, ii) in c.children.filter(chr => chr[2])"
                     :to="cc[2]"
                     :key="`${index + 1}-${i + 1}-${ii + 1}`"
                   >

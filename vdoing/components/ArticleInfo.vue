@@ -9,7 +9,7 @@
 
         <li v-for="item in classifyList" :key="item">
           <!-- 跳目录页 -->
-          <router-link v-if="cataloguePermalink" :to="getLink(item)">{{
+          <router-link v-if="cataloguePermalink && getLink(item)" :to="getLink(item)">{{
             item
           }}</router-link>
           <!-- 跳分类页 -->

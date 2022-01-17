@@ -64,14 +64,6 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
         ],
       },
       {
-        text: '页面',
-        link: '/ui/',
-        items: [
-          { text: 'HTML', link: '/pages/8309a5b876fc95e3/' },
-          { text: 'CSS', link: '/pages/0a83b083bdf257cb/' },
-        ],
-      },
-      {
         text: '个人感悟',
         link: '/technology/',
         items: [

@@ -26,7 +26,7 @@
             </h2>
           </li>
           <li :key="index">
-            <router-link :to="item.path">
+            <router-link v-if="item.path" :to="item.path">
               <span class="date">{{ getDate(item) }}</span>
               {{ item.title }}
               <span class="title-tag" v-if="item.frontmatter.titleTag">
